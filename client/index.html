@@ -1,10 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Autodesk React Tree</title>
+    <!-- Autodesk Viewer -->
+
+    <link
+      rel="stylesheet"
+      href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.css"
+    />
+    <script
+      src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.js"
+      defer
+    ></script>
+
+    <!-- Inspire Tree (si aún lo usas fuera de React) -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/inspire-tree-dom@4.0.6/dist/inspire-tree-light.min.css"
+    />
+    <script
+      src="https://unpkg.com/inspire-tree@4.3.1/dist/inspire-tree.js"
+      defer
+    ></script>
+    <script
+      src="https://unpkg.com/inspire-tree-dom@4.0.6/dist/inspire-tree-dom.min.js"
+      defer
+    ></script>
   </head>
   <body>
     <div id="root"></div>
