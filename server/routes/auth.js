@@ -1,4 +1,5 @@
 const express = require("express");
+const { CLIENT_URL } = require("../config.js");
 const {
   getAuthorizationUrl,
   authCallbackMiddleware,
@@ -14,11 +15,11 @@ router.get("/api/auth/login", function (req, res) {
 
 router.get("/api/auth/logout", function (req, res) {
   req.session = null;
-  res.redirect("/");
+  res.redirect(CLIENT_URL);
 });
 
 router.get("/api/auth/callback", authCallbackMiddleware, function (req, res) {
-  res.redirect("/");
+  res.redirect(CLIENT_URL);
 });
 
 router.get("/api/auth/token", authRefreshMiddleware, function (req, res) {
