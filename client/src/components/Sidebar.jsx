@@ -7,7 +7,7 @@ import {
   getContents,
   getVersions,
 } from "../lib/treeData";
-// import "inspire-tree-dom/dist/inspire-tree.css";
+import "inspire-tree-dom/dist/inspire-tree-light.css";
 
 export function Sidebar({ onVersionSelected }) {
   const treeRef = useRef(null);
@@ -46,16 +46,15 @@ export function Sidebar({ onVersionSelected }) {
     new InspireTreeDOM(tree, { target: treeRef.current });
 
     return () => {
-      tree.removeAll(); // cleanup
+      tree.removeAll();
     };
   }, [onVersionSelected]);
 
   return (
     <div
       ref={treeRef}
-      className="overflow-y-auto h-full w-full bg-white border-r p-2"
-    >
-      aaaa
-    </div>
+      className="h-full w-full overflow-auto bg-white border-r p-2"
+      style={{ minHeight: "1px" }}
+    />
   );
 }

@@ -44,12 +44,14 @@ function App() {
       <Header user={user} onLogin={handleLogin} onLogout={handleLogout} />
 
       {user ? (
-        <div className="flex flex-1">
-          <Sidebar
-            onVersionSelected={(urn) =>
-              setSelectedUrn(btoa(urn).replace(/=/g, ""))
-            }
-          />
+        <div className="grid grid-cols-[1fr_3fr] flex-1 h-full">
+          <div className="flex flex-1">
+            <Sidebar
+              onVersionSelected={(urn) =>
+                setSelectedUrn(btoa(urn).replace(/=/g, ""))
+              }
+            />
+          </div>
           <Viewer urn={selectedUrn} />
         </div>
       ) : (

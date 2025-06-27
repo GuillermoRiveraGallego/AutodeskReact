@@ -29,5 +29,7 @@ export function Viewer({ urn }) {
     }
   }, [urn]);
 
-  return <div ref={containerRef} className="w-full h-full bg-gray-100" />;
+  return (
+    <div ref={containerRef} className="w-full h-full bg-gray-100 relative" />
+  );
 }
