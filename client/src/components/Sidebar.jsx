@@ -48,7 +48,7 @@ export function Sidebar({ onVersionSelected }) {
     return () => {
       tree.removeAll();
     };
-  }, [onVersionSelected]);
+  }, []);
 
   return (
     <div
